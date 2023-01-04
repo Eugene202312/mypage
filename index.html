@@ -92,11 +92,20 @@
             display: flex;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                console.log(data['temp'])
+                $('#name-q1')
+            })
+        })
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>내 생애 최고의 영화들!</h1>
+        <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
         <button>영화 기록하기</button>
     </div>
     <div class="mypost">
@@ -118,7 +127,7 @@
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">코멘트</label>
-          </div>
+        </div>
         <div class="mybtn">
             <button type="button" class="btn btn-dark">기록하기</button>
             <button type="button" class="btn btn-outline-dark">닫기</button>
@@ -134,7 +143,7 @@
                         <h5 class="card-title">영화 제목이 들어갑니다.</h5>
                         <p class="card-text">여기에 코멘트가 들어갑니다.</p>
                         <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
+                        <p class="mycomment">여기의 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
@@ -146,7 +155,7 @@
                         <h5 class="card-title">영화 제목이 들어갑니다.</h5>
                         <p class="card-text">여기에 코멘트가 들어갑니다.</p>
                         <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
+                        <p class="mycomment">여기의 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
@@ -158,7 +167,7 @@
                         <h5 class="card-title">영화 제목이 들어갑니다.</h5>
                         <p class="card-text">여기에 코멘트가 들어갑니다.</p>
                         <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
+                        <p class="mycomment">여기의 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
@@ -170,7 +179,7 @@
                         <h5 class="card-title">영화 제목이 들어갑니다.</h5>
                         <p class="card-text">여기에 코멘트가 들어갑니다.</p>
                         <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
+                        <p class="mycomment">여기의 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
